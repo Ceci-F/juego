@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+:root{
+    box-sizing: border-box;
+    font-family: 'Pixelify Sans', sans-serif;
+    --rojo:#D94A64;
+    --rojo-opaco:#A65866;
+    --verde:#266B73;
+    --verde-opaco:#85A6A6;
+    --whitish: #FDF5E7;
+}
+body{
+    background-color: var(--verde-opaco);
+    background-image: url(../images/pixel_bg.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: var(--whitish);
+    padding: 0 20px;
+    border: dashed 30px var(--rojo);
+}
+h1{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 90px;
+    color: var(--verde);
+}
+h2{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 67px;
+    color: var(--verde-opaco);
+}
+h4{
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-size: 38px;
+    color: var(--verde-opaco);
+    margin: 5px auto;
+}
+button{
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 50px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: var(--whitish);
+    color: var(--rojo);
+    border: dashed 10px var(--rojo);
+    margin-top: 10px;
+}
+.usuario_elige h2{
+    margin-bottom: 100px;
+}
+.usuario_elige ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.usuario_elige ul li{
+    text-align: center;
+}
+.computador_elige div{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+.computador_elige h2{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    font-size: 67px;
+    color: var(--rojo-opaco);
+
+}
+.usuario_elige ul li div{
+    width: 300px;
+    height: 300px;
+    margin: 25PX;
+}
+#piedra{
+    background: url(../images/sprite_piedra.png);
+}
+#papel{
+    background: url(../images/sprite_papel.png);
+}
+#tijeras{
+    background: url(../images/sprite_tijeras.png);
+}
+.animacion_piedra{
+    background:url(../images/sprite_piedra.png) ;
+ animation: anima_sprite 2s infinite steps(23);
+}
+.animacion_papel{
+    background: url(../images/sprite_papel.png);
+    animation: anima_sprite 2s infinite steps(23);
+}
+.animacion_tijeras{
+    background: url(../images/sprite_tijeras.png);
+    animation: anima_sprite 2s infinite steps(23);
+}
+.computador_elige .animacion_piedra, .computador_elige .animacion_tijeras, .computador_elige .animacion_papel{
+    animation: anima_sprite 2s infinite steps(23);
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+@keyframes anima_sprite{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -6900px 0;
+    }
+} 
+
